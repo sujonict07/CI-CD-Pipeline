@@ -1,0 +1,24 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: ms1-service
+spec:
+  selector:
+    app: ms1
+  ports:
+  - name: endpoint
+    port: 8101
+  type: ClusterIP
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: ms2-service
+spec:
+  selector:
+    app: ms2
+  ports:
+  - name: endpoint
+    port: 8102
+  type: ClusterIP
+

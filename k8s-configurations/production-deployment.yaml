@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: ms1
+  labels:
+    app: ms1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ms1
+  template:
+    metadata:
+      labels:
+        app: ms1
+    spec:
+      containers:
+      - name: micro-service-1
+        image: sujon/micro-service-one:release
+        ports:
+        - containerPort: 8101
+        imagePullPolicy: Always
+---
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: ms2
+  labels:
+    app: ms2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ms2
+  template:
+    metadata:
+      labels:
+        app: ms2
+    spec:
+      containers:
+      - name: micro-service-two
+        image: sujon/micro-service-two:release2
+        ports:
+        - containerPort: 8102
+        imagePullPolicy: Always
+
