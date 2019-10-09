@@ -1,0 +1,6 @@
+[submodule "survice-one"]
+	path = survice-one
+	url = https://github.com/sujonict07/service-one.git
+[submodule "survice-two"]
+	path = survice-two
+	url = https://github.com/sujonict07/service-two.git
