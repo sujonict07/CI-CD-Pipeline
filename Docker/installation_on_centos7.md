@@ -38,7 +38,7 @@
    ```
 
 # Installing Docker on Ubuntu 18.04 server
-
+```
 sudo apt update
 sudo apt install apt-transport-https ca-certificates curl software-properties-common
 sudo echo "deb [arch=amd64] https://download.docker.com/linux/ubuntu artful stable" >> /etc/apt/sources.list.d/docker.list
@@ -48,3 +48,4 @@ sudo apt install docker-ce
 sudo docker -v
 sudo apt install docker-compose
 sudo docker-compose --version
+```
