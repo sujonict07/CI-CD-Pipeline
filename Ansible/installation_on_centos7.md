@@ -11,10 +11,10 @@ Ansible can help you with configuration management, application deployment, task
 
 1. Install python and python-pip
    ```sh
-   yum update
-   yum install epel-release
-   yum install python
-   yum install python-pip
+   yum update -y 
+   yum install epel-release -y 
+   yum install python -y
+   yum install python-pip -y 
    pip --version
    ```
 1. Install ansible using pip check for version
